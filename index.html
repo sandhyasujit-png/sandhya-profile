@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandhya — AI Product & Technology Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --ink-2: #3f3f3a;
+      --ink-3: #7a7a72;
+      --paper: #f5f3ee;
+      --paper-2: #ebe8e0;
+      --paper-3: #dddad0;
+      --gold: #b8924a;
+      --gold-light: #e8d5b0;
+      --teal: #1d6e5e;
+      --teal-light: #d4ede8;
+      --accent: #8b3a2f;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── GRID LAYOUT ── */
+    .page-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ── LEFT SIDEBAR ── */
+    .sidebar {
+      background-color: var(--ink);
+      color: var(--paper);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .avatar-ring {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      background: rgba(184,146,74,0.08);
+      flex-shrink: 0;
+    }
+
+    .name-block h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--paper);
+    }
+    .name-block .title {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sidebar-section-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Skills pills */
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .skill-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 13px;
+      color: var(--paper-3);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s;
+      cursor: default;
+    }
+    .skill-pill:hover { color: var(--gold-light); }
+    .skill-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Contact links */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 12.5px;
+      color: var(--paper-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item:hover { color: var(--gold-light); }
+    .contact-icon {
+      width: 18px; height: 18px;
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    /* Available badge */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 11px;
+      background: rgba(29, 110, 94, 0.2);
+      border: 1px solid rgba(29,110,94,0.4);
+      color: #7dd3c4;
+      border-radius: 20px;
+      padding: 0.3rem 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .status-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #7dd3c4;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      padding: 3.5rem 4rem;
+      max-width: 860px;
+    }
+
+    /* Section label */
+    .section-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Hero */
+    .hero {
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--paper-3);
+      animation: fadeUp 0.6s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-body {
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: var(--ink-2);
+      max-width: 600px;
+    }
+
+    /* Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+      animation: fadeUp 0.6s 0.15s ease both;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--paper-3);
+      border-radius: 4px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--gold);
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    }
+    .card.teal::before { background: var(--teal); }
+    .card.accent::before { background: var(--accent); }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .card-desc {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--ink-3);
+    }
+
+    /* Work section */
+    .work-section {
+      margin-bottom: 4rem;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .work-item {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--paper-3);
+    }
+    .work-item:last-child { border-bottom: none; }
+
+    .work-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.35rem;
+    }
+    .work-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+    .work-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--ink-3);
+    }
+    .work-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-3);
+      text-align: right;
+      padding-top: 1.5rem;
+    }
+
+    /* Currently building */
+    .building-block {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 4px;
+      padding: 2rem;
+      margin-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.6s 0.45s ease both;
+    }
+    .building-block::after {
+      content: '⬡';
+      position: absolute;
+      right: 2rem; top: 50%;
+      transform: translateY(-50%);
+      font-size: 6rem;
+      opacity: 0.05;
+      color: var(--gold);
+    }
+    .building-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .building-desc {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #c4c0b8;
+      max-width: 480px;
+    }
+    .building-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+    .btag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(184,146,74,0.15);
+      border: 1px solid rgba(184,146,74,0.3);
+      color: var(--gold-light);
+      border-radius: 2px;
+      padding: 0.2rem 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--paper-3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-3);
+      animation: fadeUp 0.6s 0.6s ease both;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .page-grid { grid-template-columns: 1fr; }
+      .sidebar {
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+      .main { padding: 2.5rem 1.75rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 500px) {
+      .work-item { grid-template-columns: 1fr; }
+      .work-year { text-align: left; padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-grid">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Portfolio · 2025</div>
+
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <div class="avatar-ring">S</div>
+        <div class="name-block">
+          <h1>Sandhya</h1>
+          <div class="title">AI Product &amp; Technology Leader</div>
+        </div>
+      </div>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Open to opportunities
+      </div>
+
+      <hr class="divider" />
+
+      <div>
+        <div class="sidebar-section-label">Core Skills</div>
+        <div class="skills-list">
+          <div class="skill-pill"><span class="skill-dot"></span>AI Product Management</div>
+          <div class="skill-pill"><span class="skill-dot"></span>Technology Program Management</div>
+          <div class="skill-pill"><span class="skill-dot"></span>Budget &amp; Financial Strategy</div>
+          <div class="skill-pill"><span class="skill-dot"></span>Strategic Planning</div>
+          <div class="skill-pill"><span class="skill-dot"></span>Negotiation &amp; Stakeholder Mgmt</div>
+          <div class="skill-pill"><span class="skill-dot"></span>EDI / API Integrations</div>
+          <div class="skill-pill"><span class="skill-dot"></span>Cross-functional Delivery</div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div>
+        <div class="sidebar-section-label">Domain Focus</div>
+        <div class="skills-list">
+          <div class="skill-pill"><span class="skill-dot" style="background:#7dd3c4"></span>Freight &amp; Logistics Tech</div>
+          <div class="skill-pill"><span class="skill-dot" style="background:#7dd3c4"></span>Enterprise SaaS</div>
+          <div class="skill-pill"><span class="skill-dot" style="background:#7dd3c4"></span>Document Intelligence</div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div>
+        <div class="sidebar-section-label">Find Me</div>
+        <div class="contact-list">
+          <a href="https://linkedin.com" class="contact-item" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:hello@example.com" class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN ── -->
+    <main class="main">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="section-eyebrow">Hello, I'm Sandhya</div>
+        <h2 class="hero-headline">
+          Bridging <em>operational expertise</em><br />with AI product thinking.
+        </h2>
+        <p class="hero-body">
+          Technology Program Manager turned AI Product Manager — I translate the complexity of freight operations, document intelligence, and enterprise integrations into products that actually ship. I bring a practitioner's lens to AI: I know the data, the edge cases, and the stakeholders.
+        </p>
+      </section>
+
+      <!-- What I Do Cards -->
+      <section style="margin-bottom:3.5rem;">
+        <div class="section-eyebrow">What I bring</div>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">🧭</div>
+            <div class="card-title">AI Product Management</div>
+            <div class="card-desc">Defining product strategy for AI-powered tools — from PRDs to data pipelines — with a focus on measurable extraction accuracy and operator adoption.</div>
+          </div>
+          <div class="card teal">
+            <div class="card-icon">📐</div>
+            <div class="card-title">Program Management</div>
+            <div class="card-desc">End-to-end cross-functional delivery across engineering, ops, and vendor teams. Earned Value, risk dashboards, and multi-team coordination.</div>
+          </div>
+          <div class="card accent">
+            <div class="card-icon">💰</div>
+            <div class="card-title">Budget &amp; Financial Strategy</div>
+            <div class="card-desc">Budget ownership, build-vs-buy analysis, and cost-benefit modeling for platform investments — from $0 to enterprise scale.</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <div class="card-title">Negotiation &amp; Strategy</div>
+            <div class="card-desc">Vendor negotiations, stakeholder alignment, and executive communication across legal, engineering, operations, and finance.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Currently Building -->
+      <div class="building-block">
+        <div class="section-eyebrow" style="color:var(--gold);margin-bottom:0.5rem;">Currently Building</div>
+        <div class="building-title">AI-Powered Bill of Lading Processor</div>
+        <div class="building-desc">
+          A Layer 1 document intelligence tool that extracts structured fields from shipping instructions using AWS Textract + Rekognition, with a hybrid Chalice-based API pipeline. Designed for freight tech operators — fewer manual touches, faster carrier onboarding.
+        </div>
+        <div class="building-tags">
+          <span class="btag">PRD</span>
+          <span class="btag">AWS Textract</span>
+          <span class="btag">Document AI</span>
+          <span class="btag">Logistics</span>
+          <span class="btag">AI PM Portfolio</span>
+        </div>
+      </div>
+
+      <!-- Selected Work -->
+      <section class="work-section">
+        <div class="section-eyebrow">Selected Work</div>
+        <div class="section-title">Projects &amp; Initiatives</div>
+
+        <div class="work-item">
+          <div>
+            <div class="work-tag">AI / Document Intelligence</div>
+            <div class="work-title">Hazmat ICR/OCR Architecture Design</div>
+            <div class="work-desc">Evaluated competing document intake architectures and produced a hybrid recommendation — AWS Chalice + Textract/Rekognition — with stakeholder artifacts and a build-vs-buy analysis.</div>
+          </div>
+          <div class="work-year">2024–25</div>
+        </div>
+
+        <div class="work-item">
+          <div>
+            <div class="work-tag">Identity Resolution</div>
+            <div class="work-title">Customer Identity Resolution — Logistics Platform</div>
+            <div class="work-desc">Led technical design of fuzzy matching logic and alias table schemas. Landed on AWS Entity Resolution as the recommended fit after a comprehensive build-vs-buy evaluation.</div>
+          </div>
+          <div class="work-year">2024</div>
+        </div>
+
+        <div class="work-item">
+          <div>
+            <div class="work-tag">Program Management</div>
+            <div class="work-title">EVM Dashboard — Portfolio Intelligence</div>
+            <div class="work-desc">Designed a React-based Earned Value Management dashboard with tabs for weekly allocation, monthly budget, EV curves, and resource summaries for cross-portfolio visibility.</div>
+          </div>
+          <div class="work-year">2024</div>
+        </div>
+
+        <div class="work-item">
+          <div>
+            <div class="work-tag">Startup / Founding</div>
+            <div class="work-title">Rent-A-Vacation Inc. — Founding Board Member</div>
+            <div class="work-desc">Co-founding board member of a Delaware C-Corp (via Stripe Atlas). Leading product testing, equity structuring, and governance from day one.</div>
+          </div>
+          <div class="work-year">2025</div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span>sandhya · ai pm · freight tech</span>
+        <span>Updated May 2025</span>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>
