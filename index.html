@@ -439,10 +439,21 @@
       margin-top: 24px;
     }
 
+    /* ── RESUME ALIGNMENT ADDITIONS ── */
+    .competency-grid.grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .subsection-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 28px 0 14px;
+    }
+    .timeline-bullets li strong { color: var(--navy); font-weight: 600; }
+
     @media (max-width: 768px) {
       .sidebar { display: none; }
       .main { margin-left: 0; padding: 24px 20px; }
-      .competency-grid, .cert-list, .tools-grid { grid-template-columns: 1fr; }
+      .competency-grid, .competency-grid.grid-3, .cert-list, .tools-grid { grid-template-columns: 1fr; }
       .hero { padding: 28px 24px; }
       .hero-headline { font-size: 24px; }
     }
@@ -453,17 +464,17 @@
 <!-- ── SIDEBAR ── -->
 <aside class="sidebar">
   <div class="sidebar-name">Sandhya Sujit</div>
-  <div class="sidebar-title">Technology Program Manager<br>Targeting Program Director Roles</div>
+  <div class="sidebar-title">Technology Program Manager</div>
   <div class="sidebar-divider"></div>
 
   <nav>
     <div class="nav-label">Navigate</div>
     <a class="nav-link" href="#about">About</a>
-    <a class="nav-link" href="#competencies">Core Competencies</a>
-    <a class="nav-link" href="#ai-built">AI Tools Built</a>
+    <a class="nav-link" href="#competencies">Competencies &amp; Skills</a>
+    <a class="nav-link" href="#ai-built">AI-Enabled PM</a>
     <a class="nav-link" href="#ai-used">AI Tools Applied</a>
     <a class="nav-link" href="#experience">Experience</a>
-    <a class="nav-link" href="#certifications">Certifications</a>
+    <a class="nav-link" href="#certifications">Education</a>
   </nav>
 
   <div class="sidebar-contact">
@@ -473,7 +484,7 @@
     </a>
     <a class="contact-item" href="https://www.linkedin.com/in/sandhya-sujit-b507448" target="_blank">
       <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      linkedin.com/in/sandhya-sujit
+      linkedin.com/in/sandhya-sujit-b507448
     </a>
     <a class="contact-item" href="https://sandhya-profile-green.vercel.app" target="_blank">
       <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -492,72 +503,72 @@
   <!-- HERO -->
   <section id="about" class="hero">
     <div class="hero-eyebrow">Technology Program Manager · 15+ Years</div>
-    <h1 class="hero-headline">Enterprise programs delivered.<br><em>AI applied. Director-ready.</em></h1>
+    <h1 class="hero-headline">Enterprise programs delivered.<br><em>AI applied.</em></h1>
     <p class="hero-body">
-      Technology Program Manager with 15+ years leading enterprise integration, platform modernization, and cross-functional delivery across logistics, supply chain, and healthcare. Partners directly with technical architects, engineering leads, and offshore teams to drive complex, multi-workstream programs. Applies AI tools and CPMAI governance principles to current initiatives — building task-specific automation to improve program delivery. Targeting Technology Program Director roles.
+      Technology Program Manager with 15+ years of enterprise technology experience across logistics, supply chain, and healthcare, including 9+ years in program and project management and an earlier career in database and application development. Leads complex integration, CRM platform modernization, data migration, and AI-enabled automation initiatives, coordinating architecture, engineering, QA, vendors, offshore teams, and business stakeholders. Delivered a legacy mainframe retirement that eliminated $5M in annual maintenance fees, an EDI initiative 23% under budget, and an Agile transformation that reduced code delivery lead time from three months to two weeks. Experienced in executive governance, funding proposals, financial forecasting, risk and dependency management, vendor SOWs, and operational readiness.
     </p>
     <div class="hero-tags">
-      <span class="hero-tag">MuleSoft · Salesforce</span>
+      <span class="hero-tag">Salesforce CRM · MuleSoft</span>
       <span class="hero-tag">TMS · TOS Platforms</span>
       <span class="hero-tag">Data Migration · Snowflake</span>
-      <span class="hero-tag">AI Program Governance</span>
-      <span class="hero-tag">SAFe · Agile · SDLC</span>
+      <span class="hero-tag">AI-Enabled Automation</span>
+      <span class="hero-tag">Agile · SAFe · SDLC</span>
       <span class="hero-tag">Budget &amp; Financial Governance</span>
     </div>
   </section>
 
-  <!-- CORE COMPETENCIES -->
+  <!-- CORE COMPETENCIES & TECHNICAL SKILLS -->
   <section id="competencies" class="section">
     <div class="section-eyebrow">What I bring</div>
     <h2 class="section-title">Core Competencies</h2>
     <div class="section-rule"></div>
+    <div class="competency-grid grid-3">
+      <div class="competency-card">
+        <div class="competency-label">Program &amp; Portfolio Delivery</div>
+        <div class="competency-text">Concurrent initiatives • End-to-end delivery • Scope, schedule &amp; resource management • Risk, issue &amp; dependency management • Cross-functional leadership</div>
+      </div>
+      <div class="competency-card">
+        <div class="competency-label">Governance &amp; Financial Management</div>
+        <div class="competency-text">Executive steering committees • PMO / work intake • Funding proposals &amp; stage-gate funding • Budget, earned value &amp; forecast reporting • CapEx/OpEx</div>
+      </div>
+      <div class="competency-card">
+        <div class="competency-label">Vendor &amp; Technology Delivery</div>
+        <div class="competency-text">SOWs and deliverables • Offshore team coordination • Enterprise integration • Data migration • Release / quality governance • Agile, SAFe, Waterfall &amp; hybrid</div>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Technical Skills</h3>
     <div class="competency-grid">
       <div class="competency-card">
-        <div class="competency-label">Program Management</div>
-        <div class="competency-text">Leads execution of technology programs across project scope, timelines, governance, and cross-functional delivery</div>
+        <div class="competency-label">Platforms &amp; Integration</div>
+        <div class="competency-text">Salesforce CRM • MuleSoft • Blue Yonder TMS • TMW / TMW SaaS • Qued • Terminal Operating Systems • REST/SOAP APIs • EDI</div>
       </div>
       <div class="competency-card">
-        <div class="competency-label">Technical Background</div>
-        <div class="competency-text">Hands-on experience in programming and database design; applies this foundation to oversee Salesforce, MuleSoft, mainframe retirement, and data migration programs</div>
+        <div class="competency-label">Data &amp; Cloud</div>
+        <div class="competency-text">Snowflake • AWS S3 • Oracle PL/SQL • SQL Server • Sybase</div>
       </div>
       <div class="competency-card">
-        <div class="competency-label">AI Program Leadership</div>
-        <div class="competency-text">Applies CPMAI governance principles to AI initiatives; builds task-specific automation and AI-assisted workflows using Claude, ChatPRD, and Microsoft Copilot</div>
+        <div class="competency-label">Delivery &amp; AI Tools</div>
+        <div class="competency-text">Jira • Atlassian Rovo • Smartsheet • Power Automate • Claude • Microsoft Copilot • ChatPRD • ChatGPT</div>
       </div>
       <div class="competency-card">
-        <div class="competency-label">Budget &amp; Financial Governance</div>
-        <div class="competency-text">Tracks project budgets using Smartsheet and Excel; monitors earned value (EV), planned value (PV), burn rate, and resource charge category accuracy; prepares CapEx/OpEx forecasts</div>
-      </div>
-      <div class="competency-card">
-        <div class="competency-label">Vendor &amp; Resource Management</div>
-        <div class="competency-text">Selects, onboards, and manages offshore vendors; forecasts resource requirements and allocates team capacity against strategic priorities</div>
-      </div>
-      <div class="competency-card">
-        <div class="competency-label">Risk &amp; Governance</div>
-        <div class="competency-text">Assesses projects for delivery risk and implements mitigation strategies; introduces structured release and regression cycles to improve production stability</div>
-      </div>
-      <div class="competency-card">
-        <div class="competency-label">Stakeholder Communication</div>
-        <div class="competency-text">Delivers structured updates to Product Owners, VPs, and SLT; facilitates cross-team alignment between technical and non-technical groups</div>
-      </div>
-      <div class="competency-card">
-        <div class="competency-label">Process Improvement</div>
-        <div class="competency-text">Coaches teams on Agile, SAFe, and SDLC best practices; leads transitions between Waterfall and Agile methodologies based on project needs</div>
+        <div class="competency-label">Methods</div>
+        <div class="competency-text">Agile • SAFe • Scrum • Kanban • Waterfall • SDLC • CPMAI</div>
       </div>
     </div>
   </section>
 
-  <!-- AI TOOLS BUILT -->
+  <!-- AI-ENABLED PROGRAM MANAGEMENT -->
   <section id="ai-built" class="section">
     <div class="section-eyebrow">Built, not just used</div>
-    <h2 class="section-title">AI Tools I've Built</h2>
+    <h2 class="section-title">AI-Enabled Program Management</h2>
     <div class="section-rule"></div>
 
     <div class="tool-card">
       <div class="tool-icon">📊</div>
       <div>
-        <div class="tool-name">Project Resource Allocator</div>
-        <div class="tool-desc">Built using Claude. Takes inputs including project start date, task duration, and resource count — and generates three ready-to-use project artifacts: task-level cost estimates for financial approval, weekly resource allocation plans integrated with Smartsheet, and monthly CapEx/OpEx cost forecasts. Reduces manual effort in budget preparation and resource planning cycles.</div>
+        <div class="tool-name">Project Resource Allocator &amp; CapEx/OpEx Forecasting</div>
+        <div class="tool-desc">Built using Claude. Takes inputs including project start date, task duration, and resource count — and generates three ready-to-use project artifacts: task-level cost estimates for financial approval, weekly resource allocation plans integrated with Smartsheet, and monthly CapEx/OpEx cost forecasts. A companion Excel forecasting tool takes budget and actuals and produces a CapEx/OpEx forecast.</div>
         <span class="tool-tag">Claude</span>
         <span class="tool-tag">Excel</span>
         <span class="tool-tag">Smartsheet</span>
@@ -566,24 +577,35 @@
     </div>
 
     <div class="tool-card">
-      <div class="tool-icon">📧</div>
+      <div class="tool-icon">⚙️</div>
       <div>
-        <div class="tool-name">Development Team Blocker Scanner</div>
-        <div class="tool-desc">Built using Power Automate. Scans development team emails daily for blocker keywords and logs identified issues into a structured Excel tracker — ready to review before the morning stand-up. Surfaces blockers that often go unreported through formal channels, giving the PM advance visibility before issues escalate.</div>
-        <span class="tool-tag">Power Automate</span>
-        <span class="tool-tag">Excel</span>
-        <span class="tool-tag">Workflow Automation</span>
+        <div class="tool-name">Jira Defect, Alert &amp; Risk Automation</div>
+        <div class="tool-desc">Built using Atlassian Rovo. Jira workflows assign defect due dates by severity and send advance alerts on items coming due. A blocker scan reads development team email for blocker keywords and logs identified issues as risks, giving the PM visibility before issues escalate.</div>
+        <span class="tool-tag">Atlassian Rovo</span>
+        <span class="tool-tag">Jira</span>
+        <span class="tool-tag">Risk Logging</span>
       </div>
     </div>
 
     <div class="tool-card">
       <div class="tool-icon">📋</div>
       <div>
-        <div class="tool-name">AI-Generated Project Status Reports</div>
-        <div class="tool-desc">Uses Claude to consolidate inputs from multiple project tools and stakeholders into structured status reports for the Logistics Customer Portal — including milestone tracking views and module-level defect tracking across workstreams. Replaces manual aggregation across disconnected sources.</div>
+        <div class="tool-name">Technical &amp; Business-Facing Project Reports</div>
+        <div class="tool-desc">Uses Claude connected to Jira roadmaps to produce two report tracks for AI initiatives: technical progress by component for IT leadership, and functional performance and rollout status for executive and business stakeholders. Uses Microsoft Copilot with Jira query exports to Excel for stakeholder reporting.</div>
         <span class="tool-tag">Claude</span>
-        <span class="tool-tag">Milestone Tracking</span>
-        <span class="tool-tag">Defect Tracking</span>
+        <span class="tool-tag">Microsoft Copilot</span>
+        <span class="tool-tag">Jira</span>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">📧</div>
+      <div>
+        <div class="tool-name">Automated Weekly Status Report</div>
+        <div class="tool-desc">Built using Power Automate. Reads the weekly project status spreadsheet and produces a formatted status report for management reporting.</div>
+        <span class="tool-tag">Power Automate</span>
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">Management Reporting</span>
       </div>
     </div>
   </section>
@@ -596,23 +618,23 @@
     <div class="tools-grid">
       <div class="tool-chip">
         <div class="tool-chip-name">Claude</div>
-        <div class="tool-chip-use">Tool building, status reports, project summarization</div>
+        <div class="tool-chip-use">Tool building, technical and business-facing project reports, project summarization</div>
+      </div>
+      <div class="tool-chip">
+        <div class="tool-chip-name">Microsoft Copilot</div>
+        <div class="tool-chip-use">Stakeholder reports from Jira exports, meeting minutes, action items</div>
+      </div>
+      <div class="tool-chip">
+        <div class="tool-chip-name">Atlassian Rovo</div>
+        <div class="tool-chip-use">Jira workflow automation, defect alerts, risk logging</div>
+      </div>
+      <div class="tool-chip">
+        <div class="tool-chip-name">Power Automate</div>
+        <div class="tool-chip-use">Status report automation, workflow automation</div>
       </div>
       <div class="tool-chip">
         <div class="tool-chip-name">ChatPRD</div>
         <div class="tool-chip-use">PRD creation, requirements docs, workflow diagrams</div>
-      </div>
-      <div class="tool-chip">
-        <div class="tool-chip-name">Microsoft Copilot</div>
-        <div class="tool-chip-use">Meeting facilitation, minutes capture, action items</div>
-      </div>
-      <div class="tool-chip">
-        <div class="tool-chip-name">Power Automate</div>
-        <div class="tool-chip-use">Workflow automation, email scanning, structured logging</div>
-      </div>
-      <div class="tool-chip">
-        <div class="tool-chip-name">Gemini</div>
-        <div class="tool-chip-use">Meeting preparation, context setting, prompt design</div>
       </div>
       <div class="tool-chip">
         <div class="tool-chip-name">ChatGPT</div>
@@ -631,56 +653,69 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-meta">2022 – Present</div>
-        <div class="timeline-role">Technology Program Manager</div>
+        <div class="timeline-role">IT Program Manager / Technology Program Manager</div>
         <div class="timeline-company">Crowley · Jacksonville, FL</div>
         <ul class="timeline-bullets">
-          <li>Tracks project financials across all active programs using Smartsheet and Excel; monitors budget adherence, resource charge category validation, earned value (EV), planned value (PV), and burn rate</li>
-          <li>Leading ICR/OCR deployment via Happy Robot to automate shipping instructions and proof-of-delivery workflows (40% complete)</li>
-          <li>Leading carrier appointment automation initiative using Qued for TMS order processing via Blue Yonder (60% complete)</li>
-          <li>Leading the Logistics Customer Portal redesign from initiation across core modules including Route Search, Create Quote, Track & Trace, and Bill of Lading; pivoted management approach when the program encountered delivery challenges, partnering with Technical Director and Engineering Managers to drive execution — establishing a weekly production deployment cadence, reducing critical defects across UAT, and restoring structure, transparency, and accountability</li>
-          <li>Engaged by VP-level leadership to take ownership of EEI Filing automation to U.S. Customs after project fell behind schedule without a dedicated PM; delivered on time</li>
-          <li>Directed Salesforce–MuleSoft integrations for Commercial Logistics and Operations, including upgrade of 50+ integrations from Mule 3 to Mule 4</li>
-          <li>Built and led an offshore delivery team; reduced code delivery from 3 months to 2 weeks, improving delivery speed by 40%</li>
-          <li>Managed mainframe retirement and transition to Snowflake; coordinated AWS S3 archive migration and CRM Analytics data synchronization</li>
+          <li><strong>Enterprise Transformation &amp; Executive Governance:</strong> Led mainframe retirement, migrating 10 years of invoice and bill-of-lading history to Snowflake with AWS S3 archiving and eliminating $5M in annual maintenance fees. Established and ran a recurring steering committee with the CIO, VPs, and Directors from customer-facing and infrastructure teams to drive decisions on data retention, customer support processes, and post-implementation support.</li>
+          <li><strong>Digital Platform &amp; Integration Delivery:</strong> Led integration delivery for a Salesforce-based digital platform, coordinating Mainframe Data Engineering, MuleSoft, and Salesforce leads and integrating Oracle Finance, terminal operating systems, land transportation, and claims management through MuleSoft APIs, including equipment-control events from terminal systems and TMS. Separately manage the Mule 3-to-Mule 4 upgrade of 50+ integrations across TMW, TMW SaaS, and Blue Yonder TMS.</li>
+          <li><strong>Customer Portal Digital Transformation:</strong> Manage delivery of the Customer Portal overhaul ($1.1M budget, in execution), covering Route Search, Quote-to-Booking, Bill of Lading, Track &amp; Trace, Agentic Chat, and OCR document scanning, as the single point of contact between architects, business stakeholders, and development and QA teams.</li>
+          <li><strong>Financial Management &amp; Scope Prioritization:</strong> Led an EDI initiative providing direct customer integration to the digital platform, avoiding manual bookings and billings. Prioritized a 75-customer backlog to approximately 25 integrations based on business value and delivered on schedule for $385K against a $500K budget, 23% under budget. Established work intake and customer notification processes and transitioned ongoing operational ownership to the Technology Manager.</li>
+          <li><strong>Multi-Project Delivery &amp; Recovery:</strong> Manage 3–4 concurrent technology projects, serving as the coordination point across architects, business stakeholders, development, and QA. Recovered a major-customer API booking integration stalled for two years, delivering ahead of the revised schedule; took over a stalled Electronic Export Information (EEI) filing automation project and met its committed Q2 compliance deadline, supporting approximately 20 voyage-dependent filings per day.</li>
+          <li><strong>Agile Transformation &amp; Release Governance:</strong> Moved delivery teams from Waterfall to Agile sprints, reducing code delivery lead time from three months to two weeks. Established biweekly release planning for the Salesforce platform (~25 stories and defects per cycle). Restructured QA from a 27-person offshore team to an 8-person onshore team with two-week regression cycles.</li>
+          <li><strong>AI-Enabled Logistics Automation:</strong> Lead two initiatives in execution: Happy Robot ICR/OCR processing of unstructured logistics documents ($1M overall budget, funded in phases; targeting approximately 40% efficiency and 20% straight-through processing), and carrier appointment scheduling automation integrating Qued with Blue Yonder TMS ($300K budget; business-estimated savings of approximately five staff-hours per week).</li>
+          <li><strong>Solution Design, Financial &amp; Vendor Management:</strong> Facilitate solution design with architects, developers, and BAs, translating business needs into technical approaches. Prepared charters, business cases, capital expenditure proposals, and budgets for five projects; secured VP of Finance funding approval for four projects totaling $2.9M (EDI $500K, Customer Portal $1.1M, ICR/OCR $1M funded in phases, Qued $300K); track budgets, earned value, burn rates, and CapEx/OpEx forecasts and prepare CIO and Director-level reporting. For the contract pricing project (in execution), helped define a vendor-sourced feed and an interim MuleSoft Rate Sheet API approach using SQL Server staging and Snowflake. Manage vendor SOWs (scope, deliverables, invoice approval) for the EDI, Customer Portal, and MuleSoft engagements; coordinated offshore vendor selection and onboarding.</li>
+          <li><strong>AI-Enabled Program Management:</strong> Built Jira/Rovo workflows for defect due dates, alerts, and risk logging; use Claude and Copilot to produce technical and business-facing project reports; and built Power Automate and Excel tools for management reporting, CapEx/OpEx forecasting, and resource allocation.</li>
         </ul>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-meta">2012 – 2022</div>
+        <div class="timeline-meta">2017 – 2022</div>
         <div class="timeline-role">IT Project Manager</div>
         <div class="timeline-company">Florida Blue · Jacksonville, FL</div>
         <ul class="timeline-bullets">
-          <li>Managed 5–10 concurrent projects across healthcare IT domains using Scrum, SAFe, Kanban, and Waterfall; led cross-functional teams of up to 30</li>
-          <li>Prepared stage-gate proposals for budget approval; published weekly status and budget reports including cost variance and burn-rate analysis to senior management</li>
-          <li>Served as primary liaison between IT and business teams; facilitated PI planning, breakout sessions, and iteration demos under SAFe</li>
-          <li>Mitigated risk through financial and statistical analysis; drafted communication matrix for SLT and Business Stakeholders</li>
+          <li><strong>Healthcare Data &amp; Content Transformation:</strong> Managed content-management initiatives across Member, Provider, Care, and Claims domains, converting structured and unstructured commercial and Medicare documents from paper and electronic intake into structured XML and PDF. Managed Care-domain capture of unstructured authorization documents into XML and JSON and conversion of C-CDA documents into human-readable PDF for Medicare and healthcare vendors.</li>
+          <li><strong>Multi-Project Delivery &amp; Team Leadership:</strong> Managed 5–10 concurrent healthcare IT projects through the full SDLC, leading cross-functional teams of up to 30 developers, QA testers, analysts, and infrastructure specialists; forecasted resource needs and advised managers on hiring and reallocation.</li>
+          <li><strong>Financial Management &amp; Executive Reporting:</strong> Prepared stage-gate proposals for funding approval and managed project budgets up to $5M, tracking planned versus actual spend, cost variance, and burn rate. Published weekly status and budget reports for senior management.</li>
+          <li><strong>Agile Governance &amp; Business Alignment:</strong> Facilitated SAFe PI planning, defined high-level deliverables and acceptance criteria, managed sprint backlogs and ROAM dependency boards, and led iteration demos as the primary liaison between IT and business teams.</li>
         </ul>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-meta">2002 – 2012</div>
-        <div class="timeline-role">Senior IT Developer</div>
-        <div class="timeline-company">Florida Blue · ING–CitiStreet · PowerSabre Consulting</div>
+        <div class="timeline-meta">Earlier Career</div>
+        <div class="timeline-role">IT Developer / Technical Lead</div>
+        <div class="timeline-company">Florida Blue · ING-CitiStreet · PowerSabre Consulting</div>
         <ul class="timeline-bullets">
-          <li>Developed enterprise applications across healthcare claims processing, payroll/benefits administration, and CRM domains</li>
-          <li>Hands-on experience in programming, database design, and code/design review</li>
-          <li>Managed offshore development teams (Infosys); established release management and onboarding practices adopted across IT teams</li>
+          <li><strong>Enterprise Application Development:</strong> Developed healthcare claims adjudication systems in PL/SQL and integrated third-party applications for pharmacy claims processing. Built a health and welfare benefit management system in Visual Basic/.NET and a Java Struts wound-management application with SQL Server and role-based security.</li>
+          <li><strong>Database Migration &amp; Technical Leadership:</strong> Led a benefit management system backend migration from Sybase to SQL Server; performed database schema and table design, stored procedures, triggers, query development, performance tuning, indexing, and administration.</li>
+          <li><strong>Release Governance &amp; Team Practices:</strong> Established SVN-based PL/SQL release management, including branching, merging, release approval, and deployment scheduling for audit requirements. Created release/sign-off procedures, onboarding templates, and code-review standards adopted across teams; managed offshore development teams and task allocation.</li>
         </ul>
       </div>
 
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- EDUCATION & CERTIFICATIONS -->
   <section id="certifications" class="section">
     <div class="section-eyebrow">Credentials</div>
-    <h2 class="section-title">Certifications &amp; Education</h2>
+    <h2 class="section-title">Education &amp; Certifications</h2>
     <div class="section-rule"></div>
     <div class="cert-list">
       <div class="cert-item">
-        Cognitive Project Management in AI
+        MBA, IT Management
+        <div class="cert-org">Western Governors University</div>
+      </div>
+      <div class="cert-item">
+        Bachelor of Engineering
+        <div class="cert-org">Mumbai University</div>
+      </div>
+      <div class="cert-item">
+        Certified Scrum Master (CSM)
+        <div class="cert-org">Scrum Alliance</div>
+      </div>
+      <div class="cert-item">
+        CPMAI — Training Completed
         <div class="cert-org">PMI</div>
       </div>
       <div class="cert-item">
@@ -688,37 +723,18 @@
         <div class="cert-org">PMI</div>
       </div>
       <div class="cert-item">
-        SAFe 5.0 — Product Owner/PM, Gov Practitioner, Scrum Master
-        <div class="cert-org">Scaled Agile</div>
-      </div>
-      <div class="cert-item">
-        Certified Scrum Master
-        <div class="cert-org">Scrum Alliance</div>
-      </div>
-      <div class="cert-item">
-        Mastering Supply Chain &amp; Logistics Management
+        Mastering Supply Chain and Logistics Management
         <div class="cert-org">Alison</div>
-      </div>
-      <div class="cert-item">
-        Oracle PL/SQL &amp; Hadoop Certifications
-        <div class="cert-org">Oracle · Cloudera</div>
-      </div>
-      <div class="cert-item">
-        MBA, IT Management
-        <div class="cert-org">Western Governors University · 2019</div>
-      </div>
-      <div class="cert-item">
-        Bachelor of Engineering
-        <div class="cert-org">Mumbai University · 1999</div>
       </div>
     </div>
   </section>
 
   <div class="footer">
-    Technology Program Manager · Jacksonville, FL · 2026 · Targeting Technology Program Director Roles
+    Technology Program Manager · Jacksonville, FL · 2026
   </div>
 
 </main>
+
 
 <script>
   // Active nav link on scroll
